@@ -1,0 +1,116 @@
+.light {
+	--c100: #fff;
+	--c150: #fff;
+	--c200: #ddd;
+	--c300: #ccc;
+
+	--c700: #666;
+
+	--t300: #666;
+
+	--theme-hsl: 280, 100%, 50%;
+	--theme: hsl(280, 100%, 50%);
+}
+
+.dark {
+	--c100: #444;
+	--c150: #3d3d3d;
+	--c200: #444;
+	--c300: #333;
+
+	--c700: #777;
+	
+	--t100: #eee;
+	--t300: #999;
+
+	--theme-hsl: 280, 100%, 50%;
+	--theme: hsl(280, 100%, 50%);
+}
+
+html, body {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+	color: var(--t100);
+	background: var(--c100);
+
+	width: 100%;
+	overflow-x: hidden;
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid var(--c300);
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: var(--c300);
+}
+
+button {
+	color: var(--t100);
+	background-color: var(--c150);
+	outline: none;
+}
+
+button:disabled {
+	color: #f00;
+}
+
+button:not(:disabled):active {
+	background-color: var(--c200);
+}
+
+button:focus {
+	border-color: var(--c700);
+}
+
+  /* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+	color: var(--t100);
+	background-color: var(--c150);
+
+	-moz-appearance: textfield;
+	outline: 0;
+}
+
+input[type=number]:focus {
+	border-color: var(--c700);
+}
